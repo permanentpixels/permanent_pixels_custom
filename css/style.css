@@ -1,0 +1,18 @@
+.navbar {
+    background: black;
+    height: 85px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar_menu {
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+    z-index: 1;
+    width: 100%;
+}
