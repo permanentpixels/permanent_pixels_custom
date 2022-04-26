@@ -5,41 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Permanent Pixels</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar_container">
-            <a href="/" id="navbar_logo">Next</a>
-            <div class="navbar_toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="/" class="navbar_links">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="about.html" class="navbar_links">
-                        About
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="gallery.html" class="navbar_links">
-                        Gallery
-                    </a>
-                </li>
-                <li class="navbar_button">
-                    <a href="/" class="button">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
+    <nav class="nav">
+        <a href="/index.html" id="homebutton"><img src="/images/logo.svg" alt="logo"></a>
+        <ul class="navbar_menu">
+            <li class="link"><a href="/about.html">About</a></li>
+            <li class="link"><a href="/gallery.html">Gallery</a></li>
+            <li class="link"><a href="/mint.html">Mint</a></li>
+            <li class="link"><a href="/resources.html">Resources</a></li>
+        </ul>
+        <div class="hamburger_bar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </nav>
+    <script src="/app.js"></script>
+    <main>
+        <div class="home_body_content">
+            <h1>Permanent Pixels NFT</h1>
+            <div class="main_image"><img src="/images/Example.png" alt="Permanent Pixel Example"></div>
+            <h1>Perfectly random, black and white images.</h1>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <ul class="footer_menu">
+            <li class="link"><a href="/about.html">Twitter</a></li>
+            <li class="link"><a href="/gallery.html">Discord</a></li>
+            <li class="link"><a href="/mint.html">Opensea</a></li>
+            <li class="link"><a href="/resources.html">Smartcontract</a></li>
+            <li class="link"><a href="/resources.html">Terms</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
