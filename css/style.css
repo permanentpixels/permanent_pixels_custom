@@ -8,3 +8,7 @@ h1 {
     padding-left: 10%;
     padding-right: 10%
 }
+/* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
