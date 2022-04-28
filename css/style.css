@@ -1,90 +1,10 @@
-/* make all links looks white no matter what */
-* a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: white;
-}
 * {
     font-family: 'Space Mono', monospace;
-    color: white;
-}
-html {
-    background-color: black !important;
 }
 h1 {
-    font-size: 32px;
-    text-align: center;
+    color: white;
 }
-/* header start */
-.nav {
-    background-color: black;
-    height: 80px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 2px solid white;
+.px-6 {
+    padding-left: 20%;
+    padding-right: 20%
 }
-#homebutton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-}
-#homebutton img {
-    height: 50px;
-}
-.navbar_menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-    padding-right: 10%;
-}
-.link {
-    padding: 25px;
-}
-@media screen and (max-width: 1000px) {
-    .nav {
-        border-bottom: 10px solid blue;
-    }
-}
-/* header end */
-
-/* body start (homepage)*/
-.home_body_content {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.main_image img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-/* body end (homepage) */
-
-/* footer start */
-.footer {
-    background-color: black;
-    height: 80px;
-    font-size: 20px;
-
-    bottom: 0;
-    border-top: 1px solid white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer_menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-}
-/* footer end */
