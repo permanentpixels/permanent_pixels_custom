@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <title>Permanent Pixels | Home</title>
+    <title>Permanent Pixels | Gallery</title>
 </head>
 <body class="bg-black">
-    <nav class="navbar navbar-expand-lg sticky-top border-bottom border-2 border-white px-6">
+    <nav class="navbar navbar-expand-lg border-bottom border-2 border-white px-6">
 
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand">
@@ -28,7 +28,7 @@
                     <a class="nav-link" href="./about.html"><h5>About</h5></a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="./gallery.html"><h5>Gallery</h5></a>
+                    <a class="nav-link" aria-current="page" href="./gallery.html"><h5><u>Gallery</u></h5></a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="./mint.html"><h5>Mint</h5></a>
@@ -40,13 +40,10 @@
         </div>
     </nav>
     <div class="container">
-        <h1 class="text-center fw-bold my-5">Permanent Pixels NFT</h1>
-        <img src="./images/example.svg" class="mx-auto d-block" alt="Example Permanent Pixel" style="max-width: 40vh;height: auto;">
-        <!-- should the image have a border here? To test it out add "border border-secondary" to the class above -->
-        <h2 class="text-center fw-bold my-5">Perfectly random, black and white images.</h2>
+        <h1 class="text-center fw-bold my-5">Gallery</h1>
+
     </div>
-    <!-- somewhat of a hardcode but the "fixed-bottom" class should only be on the homepage to ensure that it stays at the bottom of the page. It shouldn't be fixed on any of the other pages. On the other pages there will be enough content to push it to the bottom and removing the class makes sure that it is not presistent when scrolling -->
-    <footer class="footer fixed-bottom navbar-dark bg-black border-top border-2 border-white">
+    <footer class="footer navbar-dark bg-black border-top border-2 border-white">
         <ul class="container d-flex justify-content-center align-items-center">
             <li class="nav-item mt-2">
                 <a class="nav-link active" href="https://twitter.com/pxlsnft" target="_blank"><img src="./images/twitter.svg" alt="Twitter Logo" width="30" height="auto"></a>
