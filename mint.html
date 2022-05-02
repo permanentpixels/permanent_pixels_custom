@@ -13,8 +13,8 @@
     <title>Permanent Pixels | Mint</title>
 </head>
 <body class="bg-black">
-    <nav class="navbar navbar-expand-lg border-bottom border-2 border-white px-6">
-
+    <!-- added bg-black here -->
+    <nav class="navbar navbar-expand-lg bg-black border-bottom border-2 border-white px-6">
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand">
                 <img src="./images/logo.svg" alt="Permanent Pixels Logo" width="50" height="50"></a>
@@ -39,88 +39,47 @@
             </ul>
         </div>
     </nav>
-<!-- the next 2 divs that follow should add up to 85vh -->
-    <div class="container-fluid text-center px-0" style="height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold"><u>Mint</u></h1>
+
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center px-0">
+        <!-- could add 'border-bottom border-1 border-white' to the div below -->
+        <div class="container-fluid bg-black border-bottom border-1 border-white">
+            <h1 class="fw-bold container-fluid d-flex justify-content-center my-5"><u>Mint</u></h1>
+            <h5>Cost per mint: .33 Matic</h5>
+            <h5 class="mb-5">Currently minted: 100 / 10,000,000</h5>
         </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 75vh;">
-            <h1>Mint paused, come back later</h1>
+
+        <!-- contract is paused -->
+
+        <!-- <div class="container-fluid">
+            <h1 class="my-5">Contract paused, come back later</h1>
+        </div> -->
+
+        <!-- contract unpaused, user needs to connect metamask -->
+
+        <!-- <div class="container-fluid" style="background-color: #035AA6;">
+            <h1 class="my-5">Click to connect</h1>
+        </div> -->
+
+        <!-- contract unpaused, metmask connected, not on polygon network -->
+
+        <!-- <div class="container-fluid" style="background-color: #035AA6;">
+            <h1 class="my-5">Make sure you are connected to the polygon network</h1>
+        </div> -->
+
+        <!-- contract unpaused, metamask connect, on polygon network -->
+        <div class="container-fluid" style="background-color: #F29F05;">
+            <h1 class="my-5" style="color: black;">How many NFTs would you like to mint?</h1>
         </div>
-    </div>
-    <div class="container-fluid text-center px-0" style="background-color: #035AA6;height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold"><u>Mint</u></h1>
+        <div class="container-fluid" style="background-color: #F29F05;">
+            <h1 class="my-5" style="color: lightgray;">/1000</h1>
         </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 75vh;">
-            <h1>Click to connect</h1>
-        </div>
-    </div>
-    <div class="container-fluid text-center px-0" style="background-color: #035AA6;height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold"><u>Mint</u></h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 75vh;">
-            <h1>Make sure you are on the Polygon Network</h1>
-        </div>
-    </div>
-    <div class="container-fluid text-center px-0" style="background-color: #F29F05;height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold" style="color: black;"><u>Mint</u></h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 25vh;">
-            <h1 style="color: black;">How many NFTs do you want to mint?</h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 25vh;">
-            <p style="color: black;font-size: 50px;">/1000</p>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 25vh;">
-            <p style="color: black;font-size: 50px;"></p>
-        </div>
-    </div>
-    <div class="container-fluid text-center px-0" style="background-color: #F29F05;height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold" style="color: black;"><u>Mint</u></h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 25vh;">
-            <h1 style="color: black;">How many NFTs do you want to mint?</h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 25vh;">
-            <p style="color: black;font-size: 50px;">1000/1000</p>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #03A64A;height: 25vh;">
-            <h1 style="color: black;">Click to mint 1000</h1>
+        <div class="container-fluid" style="background-color: #F29F05;">
+            <div class="container py-2 mb-5" style="background-color: #03A64A;">
+                <h1 class="my-5" style="color: black;">Mint</h1>
+            </div>
         </div>
     </div>
 
-    <div class="container-fluid text-center px-0" style="background-color: #F29F05;height: 85vh;">
-        <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="height: 20vh;">
-            <h1 class="fw-bold mb-2" style="color: black;"><u>Mint</u></h1>
-            <h5 style="color: black;">Current supply: 1,000,000 / 10 Million</h5>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 22.5vh;">
-            <h1 style="color: black;">How many NFTs do you want to mint?</h1>
-        </div>
-        <div class="container-fluid d-flex flex-column justify-content-center align-items-bottom" style="height: 22.5vh;">
-            <p class="mb-2" style="color: black;font-size: 50px;">1000/1000</p>
-            <h5 style="color: black;">Estimated cost: 300 Matic</h5>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #03A64A;height: 20vh;">
-            <h1 style="color: black;">Click to mint 1000</h1>
-        </div>
-    </div>
-
-    <div class="container-fluid text-center px-0" style="background-color: #F29F05;height: 85vh;">
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 10vh;">
-            <h1 class="fw-bold" style="color: black;"><u>Mint</u></h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 40vh;">
-            <h1 style="color: black;">Click "accept" in your wallet to mint your NFTs!</h1>
-        </div>
-        <div class="container-fluid d-flex justify-content-center align-items-center" style="background-color: #03A64A;height: 35vh;">
-            <h1 style="color: black;">I want to mint more</h1>
-        </div>
-    </div>
     <footer class="footer navbar-dark bg-black border-top border-2 border-white">
         <ul class="container d-flex justify-content-center align-items-center">
             <li class="nav-item mt-2">
