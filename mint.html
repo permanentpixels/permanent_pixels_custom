@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/mint.js"></script>
     <title>Permanent Pixels | Mint</title>
 </head>
 <body class="bg-black">
@@ -49,22 +53,11 @@
         </div>
 
 
-        <div class="container-fluid d-flex justify-content-center align-items-center mb-5">
-            <h5 class="d-flex justify-content-center align-items-center m-0" style="background-color: #03A64A;color: white;width: 70vw;height: 5vh;">Click to connect</h5>
-        </div>
-
         <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center mb-5">
-            <h5 class="d-flex justify-content-center align-items-center m-0" style="background-color: white;color: black;width: 25vw;height: 5vh;"></h5>
-            <h5 class="d-flex justify-content-center align-items-center m-0" style="background-color: #03A64A; color: white;width: 45vw;height: 5vh;">Mint</h5>
-            <p class="d-flex justify-content-end align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p>
+            <input id="mint-amount" hidden type="text" class="border-0 text-center mint-amount m-0"></input>
+            <button id="mint-button" type="button" class="m-0">Click to connect</button>
+            <p class="d-none justify-content-end align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p>
         </div>
-
-        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center mb-5">
-            <h5 class="d-flex justify-content-center align-items-center m-0" style="background-color: white;color: black;width: 25vw;height: 5vh;"></h5>
-            <h5 class="d-flex justify-content-center align-items-center m-0" style="background-color: #03A64A; color: white;width: 45vw;height: 5vh;">Mint</h5>
-            <p class="d-flex justify-content-start align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p>
-        </div>
-
     </div>
 
     <footer class="footer navbar-dark bg-black ">

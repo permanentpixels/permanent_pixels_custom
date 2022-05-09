@@ -1,19 +1,75 @@
 * {
     font-family: 'Space Mono', monospace;
 }
-h1, h2, h3, h4, h5, h6, li, p, .col {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+.col {
     color: white;
 }
+
 .px-6 {
     padding-left: 10%;
     padding-right: 10%
 }
+
 /* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
 .mt-6 {
     margin-top: 10%;
 }
+
 /* set the hamburger button to white instead of gray */
-.custom-toggler .navbar-toggler-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")};
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+
+input#mint-amount {
+    background-color: white;
+    color: black;
+    width: 25vw;
+    height: 5vh;
+    min-height: 50px;
+
+    animation-duration: 2s;
+    animation-name: reveal-amount;
+}
+
+@keyframes reveal-amount {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 45vm;
+    }
+}
+
+#mint-button:active {
+    border-width: 2px;
+}
+
+#mint-button {
+    background-color: #03A64A;
+    border-color: #03A64A;
+    color: white;
+    width: 70vw;
+    height: 5vh;
+    border-width: 0;
+    min-height: 50px;
+}
+
+h5.mint-button {
+    border-width: none;
+}
+
+
