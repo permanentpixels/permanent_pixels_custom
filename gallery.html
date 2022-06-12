@@ -10,10 +10,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/table_style.css">
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" class="init">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                ajax: 'data.txt',
+                searching: false,
+                paging: false
+            });
+        });
+            </script>
     <title>Permanent Pixels | Gallery</title>
 </head>
 <body class="bg-black">
-    <nav class="navbar navbar-expand-lg bg-black ">
+    <nav class="navbar navbar-expand-lg bg-black px-6">
 
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand">
@@ -42,6 +56,50 @@
     <div class="container">
         <h1 class="text-center fw-bold my-5">Gallery</h1>
 
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Token ID</th>
+                    <th>Skew</th>
+                    <th>Rarity</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Token ID</th>
+                    <th>Skew</th>
+                    <th>Rarity</th>
+                </tr>
+            </tfoot>
+        </table>
+        
+<!-- 
+        <table class="table table-black text-center border-0" id="data-table">
+            <thead>
+              <tr>
+                <th scope="col" style="width:33%;">Rarity</th>
+                <th scope="col" style="width:33%;">Skew</th>
+                <th scope="col" style="width:33%;">Token ID#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>White</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Black</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>None</td>
+                <td>34</td>
+              </tr>
+            </tbody>
+          </table> -->
     </div>
     <footer class="footer navbar-dark bg-black ">
         <ul class="container d-flex justify-content-center align-items-center">
