@@ -46,17 +46,20 @@
 
     <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center px-0">
         <!-- could add 'border-bottom border-1 border-white' to the div below -->
-        <div class="container-fluid bg-black ">
+        <div class="container-fluid bg-black mb-5">
             <h1 class="fw-bold container-fluid d-flex justify-content-center my-5">Mint</h1>
             <h5>Cost per mint: .33 Matic</h5>
             <h5 class="mb-5">Currently minted: 100 / 10,000,000</h5>
         </div>
 
+        <div class="container-fluid mb-3">
+            <h5>Mint up to <span style="color: #03A64A;">1000</span> Permanent Pixels at a time</h5>
+        </div>
 
-        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center mb-5">
-            <input id="mint-amount" hidden type="text" class="border-0 text-center mint-amount m-0"></input>
+        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center mb-5 minting-container ">
+            <input id="mint-amount" class="border-0 text-center mint-amount m-0 hidden"></input>
             <button id="mint-button" type="button" class="m-0">Click to connect</button>
-            <p class="d-none justify-content-end align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p>
+            <!-- <p class="d-none justify-content-end align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p> -->
         </div>
     </div>
 

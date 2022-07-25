@@ -105,18 +105,18 @@ var mintClick = function(event) {
 }
 
 $(document).ready(() => {
-    checkNetwork().then(function(result) {
-        if (result) {
-            return getTotalSupply();
-        }
-        else {
-            window.alert("Connect to the correct network!");
-        }
-    }).then(function(supply) {
-        if (supply) {
-            $("#numberMinted").text(supply);
-        }
-    })
+    // checkNetwork().then(function(result) {
+    //     if (result) {
+    //         return getTotalSupply();
+    //     }
+    //     else {
+    //         window.alert("Connect to the correct network!");
+    //     }
+    // }).then(function(supply) {
+    //     if (supply) {
+    //         $("#numberMinted").text(supply);
+    //     }
+    // })
     $("#action").click(function(event) {
         
         // if (!state.connected) {
@@ -128,8 +128,28 @@ $(document).ready(() => {
         // }
     });
 
-    $("#mint-button").click(function(event) {
-        let mintAmount = $("#mintAmount");
-        mintAmount.removeAttr("hidden");
+    $("#mint-button").click((event) => {
+        $("#mint-amount").removeClass("hidden");
+        $("#mint-amount").addClass("reveal");
+        $("#mint-button").text("Mint");
+    });
+
+
+    $("#mint-amount").val('');
+    document.getElementById("mint-amount").previousValue = '';
+    
+    document.getElementById("mint-amount").addEventListener('input', (event) => {
+        if (event.target.value === '') {
+            event.target.value.previousValue = '';
+            return;
+        }
+        let num = event.target.value.replace(/\D/, '');
+        if (0 < num && num < 1001) {
+            event.target.value = num;
+            event.target.previousValue = num;
+        }
+        else {
+            event.target.value = event.target.previousValue ?? '';
+        }
     });
 });
