@@ -74,7 +74,14 @@ input#mint-amount {
     min-height: 50px;
 }
 
+#mint-button.disable {
+    background-color: gray;
+    cursor: default;    
+}
+
+
 .minting-container {
+    max-width: 700px;
     height: 100px;
 }
 
@@ -88,4 +95,12 @@ h5.mint-button {
     border-width: none;
 }
 
+.error-banner {
+    background-color: #f22900;
+    /* background-color: #e1453a; */
+    height: 100px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
