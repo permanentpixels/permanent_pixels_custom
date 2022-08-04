@@ -147,9 +147,18 @@ const handleMintButtonClick = async (event) => {
       const contract = await getContract();
 
       const accounts = await web3.eth.getAccounts();
-      const result = await contract.methods
-        .mint(value)
-        .send({ from: accounts[0], value: 0, gas: 3000000 });
+
+      const args = {
+        from: accounts[0],
+        value: 0,
+        gas: 20000000,
+      };
+
+      const gasEstimate = await contract.methods.mint(value).estimateGas(args);
+      console.log(gasEstimate);
+      args.gas = gasEstimate;
+      // args.gasPrice = 75000000000000000;
+      const result = await contract.methods.mint(value).send(args);
 
       console.log(result);
     }
@@ -216,7 +225,9 @@ const checkAndShowNetworkError = () => {
 
 const injectContractAddress = () => {
   $("#contract-address").text(config.contractAddress);
-  $("#contract-address").append('<img class="link-icon" src="/images/link.svg"/>');
+  $("#contract-address").append(
+    '<img class="link-icon" src="/images/link.svg"/>'
+  );
   $("#contract-address").attr(
     "href",
     "https://mumbai.polygonscan.com/address/" + config.contractAddress
