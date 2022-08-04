@@ -57,22 +57,6 @@ var checkNetwork = async () => {
   return true;
 };
 
-var mint = async (amount) => {
-  if (checkNetwork()) {
-    var contract = await getContract();
-    let accounts = await web3.eth.requestAccounts();
-
-    if (contract && accounts.length) {
-      contract.methods
-        .mint(amount)
-        .send({ from: accounts[0], value: 0 })
-        .catch(console.log.bind(console));
-    }
-  } else {
-    window.alert("Select Mumbai Network!");
-  }
-};
-
 var getAbi = async () => {
   let response = await fetch(abiFile);
   let text = await response.text();
@@ -134,8 +118,6 @@ const displayMintedStats = async () => {
     const mintedAmount = await getMintedAmount();
     $("#minted-amount").text(mintedAmount);
   } catch (e) {
-    $("#minted-amount").text("Could not connect to RPC");
-
     setTimeout(displayMintedStats, 2000);
   }
 };
@@ -167,7 +149,7 @@ const handleMintButtonClick = async (event) => {
       const accounts = await web3.eth.getAccounts();
       const result = await contract.methods
         .mint(value)
-        .send({ from: accounts[0], value: 0 });
+        .send({ from: accounts[0], value: 0, gas: 3000000 });
 
       console.log(result);
     }
@@ -232,6 +214,15 @@ const checkAndShowNetworkError = () => {
   });
 };
 
+const injectContractAddress = () => {
+  $("#contract-address").text(config.contractAddress);
+  $("#contract-address").append('<img class="link-icon" src="/images/link.svg"/>');
+  $("#contract-address").attr(
+    "href",
+    "https://mumbai.polygonscan.com/address/" + config.contractAddress
+  );
+};
+
 $(document).ready(async () => {
   checkAndShowNetworkError()
     .then((result) => {
@@ -242,6 +233,8 @@ $(document).ready(async () => {
   setupMetaMaskListeners();
 
   displayMintedStats();
+
+  injectContractAddress();
 
   $("#mint-button").click(handleMintButtonClick);
 

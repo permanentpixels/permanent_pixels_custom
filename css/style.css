@@ -40,6 +40,11 @@ input#mint-amount {
     min-height: 50px;
 }
 
+
+input#mint-amount:focus-visible {
+    outline: none;
+}
+
 .reveal {
     width: 25%;
     animation-duration: 1s;
@@ -103,4 +108,13 @@ h5.mint-button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#contract-address {
+   color: white;
+   text-decoration: none; 
+}
+
+.link-icon {
+    width: 22px;
 }
