@@ -1,6 +1,10 @@
 var { contractAddress, abiFile, correctNetworkId } = config;
 var web3 = new Web3(Web3.givenProvider);
 
+const contractWrapper = {
+  contract: null,
+};
+
 const getNetworkInformation = async () => {
   if (window.ethereum && window.ethereum.isMetaMask) {
     const accounts = await web3.eth.getAccounts();
@@ -27,16 +31,10 @@ const setupMetaMaskListeners = () => {
     return;
   }
   window.ethereum.on("chainChanged", (chainId) => {
-    // Handle the new chain.
-    // Correctly handling chain changes can be complicated.
-    // We recommend reloading the page unless you have good reason not to.
     window.location.reload();
   });
 
   window.ethereum.on("accountsChanged", (chainId) => {
-    // Handle the new chain.
-    // Correctly handling chain changes can be complicated.
-    // We recommend reloading the page unless you have good reason not to.
     window.location.reload();
   });
 };
@@ -71,8 +69,12 @@ var getAbi = async () => {
 };
 
 var getContract = async () => {
-  let abi = await getAbi();
-  return new web3.eth.Contract(abi, contractAddress);
+  if (!contractWrapper.contract) {
+    let abi = await getAbi();
+    contractWrapper.contract = new web3.eth.Contract(abi, contractAddress);
+  }
+
+  return contractWrapper.contract;
 };
 
 var getNetVersion = async () => {
@@ -147,11 +149,16 @@ const handleMintButtonClick = async (event) => {
       const contract = await getContract();
 
       const accounts = await web3.eth.getAccounts();
-      const result = await contract.methods
-        .mint(value)
-        .send({ from: accounts[0], value: 0, gas: 3000000 });
 
-      console.log(result);
+      const basePrice = await web3.eth.getGasPrice();
+
+      const args = {
+        from: accounts[0],
+        value: 0,
+        gasPrice: basePrice,
+      };
+
+      const result = await contract.methods.mint(value).send(args);
     }
   } else {
     try {
@@ -207,6 +214,16 @@ const checkAndShowNetworkError = () => {
           "Switch to " + (config.correctNetworkName || "Polygon")
         );
         reject(false);
+      } else {
+        const contract = await getContract();
+        const paused = await contract.methods.paused().call();
+
+        if (paused) {
+          showErrorBanner("Minting is paused!");
+          $("#mint-button").text("Minting paused");
+          disableMintButton();
+          reject(false);
+        }
       }
     }
 
@@ -216,7 +233,9 @@ const checkAndShowNetworkError = () => {
 
 const injectContractAddress = () => {
   $("#contract-address").text(config.contractAddress);
-  $("#contract-address").append('<img class="link-icon" src="/images/link.svg"/>');
+  $("#contract-address").append(
+    '<img class="link-icon" src="/images/link.svg"/>'
+  );
   $("#contract-address").attr(
     "href",
     "https://mumbai.polygonscan.com/address/" + config.contractAddress
@@ -238,6 +257,8 @@ $(document).ready(async () => {
 
   $("#mint-button").click(handleMintButtonClick);
 
+  const contract = await getContract();
+  const paused = await contract.methods.paused().call();
   document
     .getElementById("mint-amount")
     .addEventListener("input", mintAmountInputHandler);
