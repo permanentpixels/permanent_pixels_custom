@@ -1,4 +1,4 @@
-var { contractAddress, abiFile, correctNetworkId } = config;
+var { contractAddress, correctNetworkId } = config;
 var web3 = new Web3(Web3.givenProvider);
 
 const contractWrapper = {
@@ -55,22 +55,8 @@ var checkNetwork = async () => {
   return true;
 };
 
-var getAbi = async () => {
-  let response = await fetch(abiFile);
-  let text = await response.text();
-  let abi = JSON.parse(text);
-
-  // Etherscan/polygonscan return a json object
-  if (abi.result) {
-    return JSON.parse(abi.result);
-  }
-
-  return abi;
-};
-
 var getContract = async () => {
   if (!contractWrapper.contract) {
-    let abi = await getAbi();
     contractWrapper.contract = new web3.eth.Contract(abi, contractAddress);
   }
 
@@ -149,12 +135,11 @@ const handleMintButtonClick = async (event) => {
       const contract = await getContract();
 
       const accounts = await web3.eth.getAccounts();
-
       const basePrice = await web3.eth.getGasPrice();
 
       const args = {
         from: accounts[0],
-        value: 0,
+        value: value * web3.utils.toWei("0.33"),
         gasPrice: basePrice,
       };
 

@@ -1,5 +1,4 @@
 const config = {
-    contractAddress: '0x28b169fa01fDb9918BdDa1b809EF11Aad7534235',
-    abiFile: 'abi.txt',
-    correctNetworkId: 80001, 
-}
+  contractAddress: "0xf4F32E2a237ff831014C6BA80366092A41Ca8477",
+  correctNetworkId: 80001,
+};
