@@ -1,2 +1,10 @@
 js/web3.min.js
 js/web3.min.js.map
+
+node_modules
+
+env/
+__pycache__/
+
+dist/
+*.sqlite*
