@@ -1,4 +1,4 @@
 const config = {
-  contractAddress: "0xf4F32E2a237ff831014C6BA80366092A41Ca8477",
+  contractAddress: "0x0000000000000000000000000000000000000000",
   correctNetworkId: 80001,
 };
