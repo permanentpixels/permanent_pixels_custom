@@ -10,24 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <link href="css/gallery.css" rel="stylesheet"/>
 
-    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/table_style.css">
-    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" class="init">
-        $(document).ready(function () {
-            $('#example').DataTable({
-                ajax: 'data.txt',
-                searching: false,
-                paging: false
-            });
-        });
-            </script>
     <title>Permanent Pixels | Gallery</title>
 </head>
 <body class="bg-black">
-    <nav class="navbar navbar-expand-lg bg-black px-6">
+   <div id="nav"></div> 
+    <!-- <nav class="navbar navbar-expand-lg bg-black px-6">
 
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand">
@@ -52,54 +42,10 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
     <div class="container">
         <h1 class="text-center fw-bold my-5">Gallery</h1>
-
-        <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Token ID</th>
-                    <th>Skew</th>
-                    <th>Rarity</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>Token ID</th>
-                    <th>Skew</th>
-                    <th>Rarity</th>
-                </tr>
-            </tfoot>
-        </table>
-        
-<!-- 
-        <table class="table table-black text-center border-0" id="data-table">
-            <thead>
-              <tr>
-                <th scope="col" style="width:33%;">Rarity</th>
-                <th scope="col" style="width:33%;">Skew</th>
-                <th scope="col" style="width:33%;">Token ID#</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>White</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Black</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>None</td>
-                <td>34</td>
-              </tr>
-            </tbody>
-          </table> -->
+        <div id="root"></div>
     </div>
     <footer class="footer navbar-dark bg-black ">
         <ul class="container d-flex justify-content-center align-items-center">
@@ -118,5 +64,13 @@
         </ul>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-table@7.8.0/dist/react-table.production.min.js"></script>
+
+    
+    <script src="dist/token-table.js"></script>
+    <script src="dist/nav-bar.js"></script>
 </body>
 </html>
