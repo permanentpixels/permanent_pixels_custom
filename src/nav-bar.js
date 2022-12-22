@@ -1,7 +1,10 @@
 "use strict";
 
 function NavBar() {
-  const pages = ["about.html", "gallery.html", "mint.html", "resources.html"];
+  const allPages = ["about.html", "gallery.html", "mint.html", "resources.html"];
+  const disabledPages = ["gallery.html"];
+  
+  const pages = allPages.filter(page => !disabledPages.includes(page));
 
   const pageLinks = pages.map((page) => {
     const name =
@@ -10,7 +13,6 @@ function NavBar() {
 
     const currentPage = window.location.pathname;
     const onPage = currentPage.includes(page);
-    console.log(currentPage.includes(page));
 
     return (
       <li className="nav-item px-3">

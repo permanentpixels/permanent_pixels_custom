@@ -1,12 +1,13 @@
 "use strict";
 
 function NavBar() {
-  const pages = ["about.html", "gallery.html", "mint.html", "resources.html"];
+  const allPages = ["about.html", "gallery.html", "mint.html", "resources.html"];
+  const disabledPages = ["gallery.html"];
+  const pages = allPages.filter(page => !disabledPages.includes(page));
   const pageLinks = pages.map(page => {
     const name = page.substring(0, 1).toUpperCase() + page.substring(1, page.lastIndexOf("."));
     const currentPage = window.location.pathname;
     const onPage = currentPage.includes(page);
-    console.log(currentPage.includes(page));
     return /*#__PURE__*/React.createElement("li", {
       className: "nav-item px-3"
     }, onPage ? /*#__PURE__*/React.createElement("a", {
