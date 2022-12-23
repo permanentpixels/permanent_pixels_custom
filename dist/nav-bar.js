@@ -29,7 +29,7 @@ function NavBar() {
     href: "./index.html",
     className: "navbar-brand"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "./images/logo.svg",
+    src: "./images/favicon.png",
     alt: "Permanent Pixels Logo",
     width: "50",
     height: "50"

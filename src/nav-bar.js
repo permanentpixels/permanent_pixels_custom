@@ -36,7 +36,7 @@ function NavBar() {
       <div className="container-fluid">
         <a href="./index.html" className="navbar-brand">
           <img
-            src="./images/logo.svg"
+            src="./images/favicon.png"
             alt="Permanent Pixels Logo"
             width="50"
             height="50"
