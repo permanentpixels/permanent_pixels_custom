@@ -1,8 +1,8 @@
 "use strict";
 
 function NavBar() {
-  const allPages = ["about.html", "gallery.html", "mint.html", "resources.html"];
-  const disabledPages = ["gallery.html", "mint.html"];
+  const allPages = ["about", "gallery", "mint", "resources"];
+  const disabledPages = ["gallery", "mint"];
   
   const pages = allPages.filter(page => !disabledPages.includes(page));
 
@@ -34,7 +34,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-black px-6">
       <div className="container-fluid">
-        <a href="./index.html" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <img
             src="./images/favicon.png"
             alt="Permanent Pixels Logo"
