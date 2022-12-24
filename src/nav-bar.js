@@ -1,13 +1,16 @@
 "use strict";
 
 function NavBar() {
-  const allPages = ["About", "Gallery", "Mint", "Resources"];
-  const disabledPages = ["Gallery", "Mint"];
+  const allPages = ["about", "gallery", "mint", "resources"];
+  const disabledPages = ["gallery", "mint"];
   
   const pages = allPages.filter(page => !disabledPages.includes(page));
 
   const pageLinks = pages.map((page) => {
-    const name = page;
+    const name =
+      page.substring(0, 1).toUpperCase() +
+      page.substring(1);
+
     const currentPage = window.location.pathname;
     const onPage = currentPage.includes(page);
 
