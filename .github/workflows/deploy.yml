@@ -21,10 +21,13 @@ jobs:
         run: npm run build
       - name: collect depoloyment files
         run: |
-          mkdir _site
-          mkdir _site/dist
+          mkdir -p _site/dist
+          mkdir -p _site/css
+          mkdir -p _site/images
           cp dist/* _site/dist/
           cp *.html _site/
+          cp css/* _site/css
+          cp images/* _site/images
       - uses: actions/upload-pages-artifact@v1
 
   # Deploy job
