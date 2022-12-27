@@ -82,6 +82,7 @@ input#mint-amount:focus-visible {
 #mint-button.disable {
     background-color: gray;
     cursor: default;    
+    border-color: gray;
 }
 
 
