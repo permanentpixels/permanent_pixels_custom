@@ -2,7 +2,7 @@
 
 function NavBar() {
   const allPages = ["about", "gallery", "mint", "resources"];
-  const disabledPages = ["gallery", "mint"];
+  const disabledPages = ["gallery"];
   
   const pages = allPages.filter(page => !disabledPages.includes(page));
 
