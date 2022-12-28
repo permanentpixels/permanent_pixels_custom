@@ -32,7 +32,7 @@ function NavBar() {
   });
 
   return (
-    <nav className="navbar navbar-expand-lg bg-black px-6">
+    <nav className="navbar navbar-expand-lg px-6">
       <div className="container-fluid">
         <a href="/" className="navbar-brand">
           <img
