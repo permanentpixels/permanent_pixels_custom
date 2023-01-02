@@ -28,7 +28,7 @@ jobs:
           cp dist/* _site/dist/
           cp *.html _site/
           cp css/* _site/css/
-          cp images/* _site/images/
+          cp -r images/* _site/images/
           cp js/* _site/js/
       - uses: actions/upload-pages-artifact@v1
 
