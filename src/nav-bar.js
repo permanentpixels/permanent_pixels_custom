@@ -1,7 +1,7 @@
 "use strict";
 
 function NavBar() {
-  const allPages = ["about", "gallery", "mint", "resources"];
+  const allPages = ["mint", "about", "gallery", "blog", "resources"];
   const disabledPages = ["gallery"];
   
   const pages = allPages.filter(page => !disabledPages.includes(page));
@@ -18,9 +18,9 @@ function NavBar() {
       <li className="nav-item px-3">
         {onPage ? (
           <a className="nav-link" aria-current="page" href={page}>
-           <u className="white"> 
+           <u className="white">
             <h5>{name}</h5>
-           </u> 
+           </u>
           </a>
         ) : (
           <a className="nav-link" href={page}>
