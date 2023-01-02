@@ -59,21 +59,21 @@
         <h2 class="fw-medium mt-5">How is Permanent Pixel rarity and metadata set up?</h2>
         <h4 class="fw-medium mt-3">Overview</h4>
         <p>Permanent Pixels have two different rarity measures that are important to pay attention to. Visual Resemblance, which refers to how much the Permanent Pixel looks like something, and Mathematical Rarity, which refers to how mathematically likely it was for a Permanent Pixel to be randomly generated. Mathematical Rarity is included in the metadata but Visual Resemblance is not, as this measure is too subjective to quantify. In addition to Mathematical Rarity, the metadata will also include the name of the NFT (pulled from what number in the collection it is), the on-chain image data, and its skew, which describes if there are more black than white squares in the image, or an equal amount.</p>
-        <h4 class="fw-medium mt-3">Mathematical Rarity</h4>
+        <h4 class="fw-medium mt-5">Mathematical Rarity</h4>
         <p>Mathematical Rarity refers to how far a minted NFT deviates from its expected configuration. For each of the 2500 squares in a Permanent pixel, there is an equally likely chance that they will be either black or white. Since we know that the black and white odds are equal, we can assume that the “typical” Permanent Pixel will have 1250 white and 1250 black squares. The mathematical rarity is calculated by taking the absolute value of the difference between the total number of black and white squares (|black — white|). The lowest score a Permanent Pixel can have is 0, and the highest score is 2500. Keep in mind that the difficulty of getting a high score does not increase on a linear scale but an exponential one, so even relatively low Mathematical Rarity scores can represent extreme rarity.</p>
         <img src="./images/example.svg" class="mx-auto d-block" alt="Example Permanent Pixel" style="max-width: 450px;">
-        <h4 class="fw-medium mt-3">Visual Resemblance</h4>
+        <h4 class="fw-medium mt-5">Visual Resemblance</h4>
         <p>Visual Resemblance refers to how recognizable an image is and the visual significance an image has. This can refer to pattern and object/picture representations. It is expected that the majority of the Permanent Pixels will not have Visual Resemblance. The Permanent Pixels that have Visual Resemblance will be extremely rare regardless of their Mathematical Rarity score.</p>
         <img src="./images/articles/whitepaper/halfandhalf.png" class="mx-auto d-block" alt="Half black half white image" style="max-width: 450px;">
         <p>Here in an example of a hypothetical Permanent Pixel with Visual Resemblance but a low rarity score. The image has 1250 black squares on the left side of the image and 1250 white squares on the right side of the image. The Mathematical Rarity score for this image would be 0, but the odds of generating such an image are catastrophically low, making it extremely rare. One good test of Visual Resemblance is if the appearance of the Permanent Pixel can easily be described.</p>
-        <h4 class="fw-medium mt-3">Easter Egg</h4>
+        <h4 class="fw-medium mt-5">Easter Egg</h4>
         <p>As discussed earlier in the randomness section of the article, there has been a significant effort made to ensure that each Permanent Pixel minted is completely random. As is the case with randomness, it is possible to generate the same number twice. While the odds are extremely unlikely, it is hypothetically possible to mint identical NFTs. The Permanent Pixels code does not check for or screen out duplicate NFT's to maintain pure randomness. Thethe random numbers used to create the NFTs are recorded in their metadata, which can be used to check for duplicates after an NFT has been minted. If duplicate Permanent Pixels are created and discovered it would be extremely rare.</p>
-        <h4 class="fw-medium mt-3">Metadata</h4>
+        <h4 class="fw-medium mt-5">Metadata</h4>
         <p>The metadata for Permanent Pixels will have 3 elements. Name, Mathematical Rarity, Random Seed and Skew. The name will be a number tied to the token ID for each Permanent Pixel, increasing linearly as more NFTs are minted. The Mathematical Rarity score will be expressed as an attribute, and as discussed earlier, will be used as the primary method to determine how rare a Permanent Pixel is. The skew value has no impact on an NFT's rarity, the skew is purely informational to let the owner know if their Permanent Pixel has more black or white pixels or an equal amount (equal amount would be a Mathematical Rarity score of 0). The image metadata will be a Base64 encoding of a SVG.</p>
         <h2 class="fw-medium mt-4">How many Permanent Pixels will be available to mint, and how much will they cost to mint?</h2>
         <h4 class="fw-medium mt-3">Overview</h4>
         <p>There will be a max supply of 10 million Permanent Pixels. Each Permanent Pixel will cost .33 Matic to mint (excluding network fees). There is no limit to the number of Permanent Pixels that can be minted by one person, but a max of 1000 can be minted by an individual at a single time. The Permanent Pixels team does not take any royalties on secondary sales of Permanent Pixels (please be aware that NFT marketplaces can still take a percentage of sales revenue).</p>
-        <h4 class="fw-medium mt-3">Supply and Perspective</h4>
+        <h4 class="fw-medium mt-5">Supply and Perspective</h4>
         <p>There is a max supply of 10 million Permanent Pixels. Initially, this may seem like an extremely large supply: many large NFT projects have a max supply of 10 thousand NFT's, so why was the decision made to make the supply 1000x larger than the norm? To understand why the decision to make the max supply 10 million NFT's was made, we need to first add perspective. There are 2500 squares in each Permanent Pixel, each of which has 2 different possible combinations. This means that there are 2<sup>2500</sup> possible combinations for Permanent Pixels. This number is so cosmically large, it is hard to understand.</p>
         <p>To attempt to put this in perspective, it is estimated that there are 200 billion trillion stars in the universe. Here is that number:</p>
         <p>200000000000000000000000</p>
@@ -83,18 +83,16 @@
         <p>Here is 2<sup>256</sup>:</p>
         <p style="overflow-wrap: anywhere">115792089237316195423570985008687907853269984665640564039457584007913129639936</p>
         <p>While a 10 million supply of Permanent Pixels initially seems large, in the perspective of the total number of possible (unlocked) combinations (2²⁵⁶ ), 10 million only covers a fraction of a percent of the possibilities.</p>
-        <h4 class="fw-medium mt-3">Infinite Monkey/Ape Theorem</h4>
+        <h4 class="fw-medium mt-5">Infinite Monkey/Ape Theorem</h4>
         <p>The Infinite Monkey Theorem states that if a monkey hits keys on a typewriter an infinite number of times it could hypothetically type out the United States Declaration of Independence, Romeo and Juliet, or any text with significant meaning. Infinite possibilities means that all possible combinations are possible.</p>
         <p>While the possible number of combinations for Permanent Pixels is technically finite, it can safely be thought of as infinite. In many ways, minting Permanent Pixels can be understood through the lens of the Infinite Monkey Theorem.</p>
         <p>We would like to propose an alternative theory to describe Permanent Pixels: the Infinite Ape Theorem:</p>
         <p style="font-style: italic; padding-left: 2rem;">Randomly changing the color of pixels in an image, an infinite number of times, will eventually result in visually significant creations.</p>
-        <h4 class="fw-medium mt-3">Price</h4>
+        <h4 class="fw-medium mt-5">Price</h4>
         <p>Given the Infinite Ape Theorem, and the large supply of Permanent Pixels, we anticipate individuals will be interested in minting multiple NFTs at once. Our aim is to keep the price of Permanent Pixels low, at .33 Matic so that there will not be a significant cost involved with minting multiple NFT's.</p>
         <img src="./images/example.svg" class="mx-auto d-block" alt="Example Permanent Pixel" style="max-width: 450px;">
         <h2 class="fw-medium mt-5">Project launch</h2>
         <p>April 2nd, 2023 @ 3PM EST</p>
-        <p></p>
-
         <h2 class="fw-medium mt-5">How to engage with Permanent Pixels</h2>
         <a href="https://pxlsnft.com/" target="_blank"><p class="text-decoration-underline" style="margin-bottom: .4rem;">Website</p></a>
         <a href="https://www.twitter.com/pxlsnft" target="_blank"><p class="text-decoration-underline" style="margin-bottom: .4rem;">Twitter</p></a>
