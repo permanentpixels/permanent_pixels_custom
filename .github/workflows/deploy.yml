@@ -30,6 +30,7 @@ jobs:
           cp css/* _site/css/
           cp -r images/* _site/images/
           cp js/* _site/js/
+          cp sitemap.txt _site/
       - uses: actions/upload-pages-artifact@v1
 
   # Deploy job
