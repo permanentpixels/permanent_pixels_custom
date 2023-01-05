@@ -1,0 +1,129 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+.col {
+    color: #d4d4d8;
+}
+
+.px-6 {
+    padding-left: 10%;
+    padding-right: 10%
+}
+
+/* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.mt-6 {
+    margin-top: 10%;
+}
+
+/* set the hamburger button to white instead of gray */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+
+input#mint-amount {
+    background-color: #d4d4d8;
+    color: black;
+    height: 100%;
+    min-height: 50px;
+}
+
+
+input#mint-amount:focus-visible {
+    outline: none;
+}
+
+.reveal {
+    width: 25%;
+    animation-duration: 1s;
+    animation-name: reveal-amount;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes reveal-amount {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 25%;
+    }
+}
+
+#mint-button:active {
+    border-width: 2px;
+}
+
+#mint-button {
+    background-color: #03A64A;
+    border-color: #03A64A;
+    color: #d4d4d8;
+    flex-grow: 1;
+    height: 100%;
+    border-width: 0;
+    min-height: 50px;
+}
+
+#mint-button.disable {
+    background-color: gray;
+    cursor: default;
+    border-color: gray;
+}
+
+
+.minting-container {
+    max-width: 700px;
+    height: 100px;
+}
+
+@include media-breakpoint-up(sm) {
+    .minting-container {
+        width: 50vw;
+    }
+}
+
+h5.mint-button {
+    border-width: none;
+}
+
+.error-banner {
+    background-color: #f22900;
+    /* background-color: #e1453a; */
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contract-address {
+   color: #d4d4d8;
+   text-decoration: none; 
+}
+
+.link-icon {
+    width: 22px;
+}
+
+.white {
+    color: #d4d4d8;
+}
+
+body, footer {
+    background-color: #0e0e10;
+}
