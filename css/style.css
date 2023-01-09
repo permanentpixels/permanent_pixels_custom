@@ -127,3 +127,19 @@ h5.mint-button {
 body, footer {
     background-color: #0e0e10;
 }
+
+/* ------------ */
+.homediv {
+    min-height: 600px;
+    height: 80vh;
+}
+@media only screen and (max-width: 1000px) {
+    .homediv {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+        height: 70vh;
+    }
+    .digitalart {
+        text-align: center;
+    }
+}
