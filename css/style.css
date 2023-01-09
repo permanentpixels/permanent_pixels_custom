@@ -136,6 +136,12 @@ body, footer {
 .home-button {
     width: 200px;
 }
+.parallex {
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media only screen and (max-width: 1000px) {
     .homediv {
         /* flex-direction: column; */
@@ -154,5 +160,8 @@ body, footer {
     .home-title {
         text-align: center;
         margin-top: 24px;
+    }
+    .homeimage {
+        padding: 12px;
     }
 }
