@@ -19,9 +19,31 @@ p,
     padding-right: 10%
 }
 
+body {
+    background-color: blue;
+}
+
+.navbar {
+    background-color: rgba(14, 14, 16, .6);
+}
+
 /* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
 .navbar-toggler:focus {
     box-shadow: none;
+}
+
+.nav-link {
+    border-radius: 4px;
+    background: #27272A;
+    padding: 10px;
+}
+
+.nav-link.p {
+    background-color: blue;
+}
+
+.footer-link {
+    padding: 10px;
 }
 
 .mt-6 {
@@ -112,8 +134,8 @@ h5.mint-button {
 }
 
 #contract-address {
-   color: #d4d4d8;
-   text-decoration: none; 
+    color: #d4d4d8;
+    text-decoration: none;
 }
 
 .link-icon {
@@ -124,7 +146,8 @@ h5.mint-button {
     color: #d4d4d8;
 }
 
-body, footer {
+body,
+footer {
     background-color: #0e0e10;
 }
 
@@ -133,34 +156,42 @@ body, footer {
     min-height: 600px;
     height: 80vh;
 }
+
 .home-button {
     width: 200px;
 }
+
 .parallex {
-background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 @media only screen and (max-width: 1000px) {
     .homediv {
         /* flex-direction: column; */
         flex-direction: column-reverse;
         height: inherit;
     }
+
     .digitalart {
         text-align: center;
     }
+
     .home-button {
         width: 160px;
     }
+
     .home-button-container {
         justify-content: center;
     }
+
     .home-title {
         text-align: center;
         margin-top: 24px;
     }
+
     .homeimage {
         padding: 12px;
     }
