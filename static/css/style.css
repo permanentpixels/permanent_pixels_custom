@@ -2,6 +2,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color: #0E0E10;
+    background-image: url(/images/home-background.svg);
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +27,51 @@ p,
 /* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
 .navbar-toggler:focus {
     box-shadow: none;
+}
+
+header {
+    background: rgba(14, 14, 16, 0.6);
+}
+
+.nav-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.nav-link {
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.nav-active {
+    background: #27272A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-mint {
+    max-width: 10rem;
+    background: #D4D4D8;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#nav-mint-label {
+    color: #000000;
+
+}
+
+
+.nav-label {
+    margin: 0;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.footer-link {
+    padding: 16px;
 }
 
 .mt-6 {
@@ -112,8 +162,8 @@ h5.mint-button {
 }
 
 #contract-address {
-   color: #d4d4d8;
-   text-decoration: none; 
+    color: #d4d4d8;
+    text-decoration: none;
 }
 
 .link-icon {
@@ -124,6 +174,48 @@ h5.mint-button {
     color: #d4d4d8;
 }
 
-body, footer {
-    background-color: #0e0e10;
+/* ------------ */
+.homediv {
+    min-height: 600px;
+    height: 80vh;
+}
+
+.home-button {
+    width: 200px;
+}
+
+.parallex {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .homediv {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+        height: inherit;
+    }
+
+    .digitalart {
+        text-align: center;
+    }
+
+    .home-button {
+        width: 160px;
+    }
+
+    .home-button-container {
+        justify-content: center;
+    }
+
+    .home-title {
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .homeimage {
+        padding: 12px;
+    }
 }
