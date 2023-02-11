@@ -23,14 +23,8 @@ title = "My New Hugo Site"
   weight = 3
 
 [[menu.main]]
-  name = 'Gallery'
-  url = ''
-  disabled = true
-  weight = 4
-
-[[menu.main]]
-  name = 'Resources'
-  url = '/resources/'
-  weight = 5
+  name = 'Mint'
+  url = '/mint/'
+  weight = 6
 
 disabledmenus = ['Resources']
