@@ -21,16 +21,40 @@ p,
 .col {
     color: #d4d4d8;
 }
-
-/* index */
-.home-button-container {
+/* ----------------------------------------------- */
+/* Start index */
+.indexdiv {
+    margin-top: 5rem;
     display: flex;
     align-items: center;
-    column-gap: 32px;
+    justify-content: space-between;
+}
+.indexdiv p{
+    font-weight: normal;
+    max-width: 43.75rem;
+}
+.indexdiv img {
+    width: 25rem;
+    height: auto;
+}
+#index-title {
+    color: white;
+    font-size: 2.25rem;
+}
+#index-header {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+#index-body {
+    font-size: 1rem;
+}
+.index-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
     margin-top: 5rem;
 }
-
-.index-button {
+.index-buttons a {
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -38,20 +62,16 @@ p,
     height: 4rem;
     width: 12.5rem;
 }
-
-#index-about-button {
+.index-buttons a:first-child {
+    /* About button */
     background-color: white;
     border: 1px solid #0E0E10;
     border-radius: 6px;
     font-size: 1.5rem;
     color: #0E0E10;
 }
-
-#index-about-button:hover {
-    opacity: 90%;
-}
-
-#index-mint-button {
+.index-buttons a:last-child {
+    /* Mint button */
     background-color: #0E0E10;
     border: 1px solid white;
     border-radius: 6px;
@@ -59,7 +79,13 @@ p,
     color: white;
 }
 
+#index-about-button:hover {
+    opacity: 90%;
+}
+
 #index-mint-button:hover {}
+/* End index */
+/* ---------------------------------------------- */
 
 .px-6 {
     padding-left: 10%;
@@ -213,7 +239,7 @@ h5.mint-button {
 }
 
 /* ------------ */
-.homediv {
+.indexdiv {
     min-height: 600px;
     height: 80vh;
 }
@@ -230,13 +256,13 @@ h5.mint-button {
 }
 
 @media only screen and (max-width: 1000px) {
-    .homediv {
+    .indexdiv {
         /* flex-direction: column; */
         flex-direction: column-reverse;
         height: inherit;
     }
 
-    .digitalart {
+    .indexdiv p {
         text-align: center;
     }
 
@@ -244,17 +270,17 @@ h5.mint-button {
         width: 10rem;
     }
 
-    .home-button-container {
+    .index-buttons {
         justify-content: center;
         margin-bottom: 5rem;
     }
 
-    .home-title {
+    #index-title {
         text-align: center;
         margin-top: 24px;
     }
 
-    .homeimage {
+    .indexdiv img {
         padding: 12px;
     }
 }
