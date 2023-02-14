@@ -1,26 +1,14 @@
 {{ define "content" }}
-<div class="homediv container mt-5 d-flex align-items-center justify-content-between">
+<div class="indexdiv container">
     <div>
-        <p class="fw-normal home-title text-white" style="font-size: 36px">Permanent Pixels NFT</p>
-        <p class="digitalart fw-normal fst-italic" style="max-width: 700px; font-size: 24px;">Next generation digital
-            art</p>
-        <p class="digitalart fw-normal" style="max-width: 700px; font-size: 16px;">Minting April 2nd, 2023 @ 3PM EST
-        </p>
-        <div class="home-button-container">
-            <a id="index-about-button" class="index-button" href="/about/">
-                About
-            </a>
-            <a id="index-mint-button" class="index-button" href="/mint/">
-                Mint
-            </a>
+        <p id="index-title">Permanent Pixels NFT</p>
+        <p id="index-header">Next generation digital art</p>
+        <p id="index-body">Minting April 2nd, 2023 @ 3PM EST</p>
+        <div class="index-buttons">
+            <a href="/about/">About</a>
+            <a href="/mint/">Mint</a>
         </div>
     </div>
-
-    <div>
-        <img class="homeimage" src="./images/example.svg" alt="Example Permanent Pixel"
-            style="width: 400px;height: auto;">
-    </div>
-    <!-- <div class="d-flex justify-content-end">
-        </div> -->
+    <img src="./images/example.svg" alt="Example Permanent Pixel">
 </div>
 {{ end }}
