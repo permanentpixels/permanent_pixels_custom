@@ -1,7 +1,26 @@
 {{ define "content" }}
-<h1 class="text-center fw-medium my-5">Permanent Pixels NFT</h1>
-<img src="./images/example.svg" class="mx-auto d-block" alt="Example Permanent Pixel"
-    style="max-width: 39vh;height: auto;">
-<!-- should the image have a border here? To test it out add "border border-secondary" to the class above -->
-<h1 class="text-center fw-medium my-5">Perfectly random, black and white images.</h1>
+<div class="homediv container mt-5 d-flex align-items-center justify-content-between">
+    <div>
+        <p class="fw-normal home-title text-white" style="font-size: 36px">Permanent Pixels NFT</p>
+        <p class="digitalart fw-normal fst-italic" style="max-width: 700px; font-size: 24px;">Next generation digital
+            art</p>
+        <p class="digitalart fw-normal" style="max-width: 700px; font-size: 16px;">Minting April 2nd, 2023 @ 3PM EST
+        </p>
+        <div class="home-button-container">
+            <a id="index-about-button" class="index-button" href="/about/">
+                About
+            </a>
+            <a id="index-mint-button" class="index-button" href="/mint/">
+                Mint
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <img class="homeimage" src="./images/example.svg" alt="Example Permanent Pixel"
+            style="width: 400px;height: auto;">
+    </div>
+    <!-- <div class="d-flex justify-content-end">
+        </div> -->
+</div>
 {{ end }}

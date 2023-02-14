@@ -3,8 +3,11 @@
 }
 
 body {
-    background-color: #0E0E10;
-    background-image: url(/images/home-background.svg);
+    background-image: url('/images/home-background.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1,
@@ -19,6 +22,45 @@ p,
     color: #d4d4d8;
 }
 
+/* index */
+.home-button-container {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    margin-top: 5rem;
+}
+
+.index-button {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    height: 4rem;
+    width: 12.5rem;
+}
+
+#index-about-button {
+    background-color: white;
+    border: 1px solid #0E0E10;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    color: #0E0E10;
+}
+
+#index-about-button:hover {
+    opacity: 90%;
+}
+
+#index-mint-button {
+    background-color: #0E0E10;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#index-mint-button:hover {}
+
 .px-6 {
     padding-left: 10%;
     padding-right: 10%
@@ -27,10 +69,6 @@ p,
 /* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
 .navbar-toggler:focus {
     box-shadow: none;
-}
-
-header {
-    background: rgba(14, 14, 16, 0.6);
 }
 
 .nav-container {
@@ -202,12 +240,13 @@ h5.mint-button {
         text-align: center;
     }
 
-    .home-button {
-        width: 160px;
+    .index-button {
+        width: 10rem;
     }
 
     .home-button-container {
         justify-content: center;
+        margin-bottom: 5rem;
     }
 
     .home-title {

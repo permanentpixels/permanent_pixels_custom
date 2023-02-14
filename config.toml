@@ -7,11 +7,6 @@ title = "My New Hugo Site"
             unsafe = true
 
 [menu]
- [[menu.main]]
-  name = 'Home'
-  url = '/'
-  weight = 1
-
 [[menu.main]]
   name = 'About'
   url = '/blog/about-permanent-pixels/'
@@ -27,4 +22,7 @@ title = "My New Hugo Site"
   url = '/mint/'
   weight = 6
 
-disabledmenus = ['Resources']
+[[menu.main]]
+  name = 'Resources'
+  url = '/resources'
+  weight = 6
