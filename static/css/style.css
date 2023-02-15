@@ -24,10 +24,11 @@ p,
 /* ----------------------------------------------- */
 /* Start index */
 .indexdiv {
-    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 600px;
+    height: 80vh;
 }
 .indexdiv p{
     font-weight: normal;
@@ -239,10 +240,7 @@ h5.mint-button {
 }
 
 /* ------------ */
-.indexdiv {
-    min-height: 600px;
-    height: 80vh;
-}
+
 
 .home-button {
     width: 200px;
@@ -257,9 +255,9 @@ h5.mint-button {
 
 @media only screen and (max-width: 1000px) {
     .indexdiv {
-        /* flex-direction: column; */
         flex-direction: column-reverse;
         height: inherit;
+        margin-top: 5rem;
     }
 
     .indexdiv p {
