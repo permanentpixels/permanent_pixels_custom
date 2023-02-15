@@ -59,31 +59,31 @@ p,
     justify-content: center;
     text-decoration: none;
     display: flex;
-    height: 4rem;
-    width: 12.5rem;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: .5s ease-in-out;
 }
 .index-buttons a:first-child {
     /* About button */
-    background-color: white;
-    border: 1px solid #0E0E10;
-    border-radius: 6px;
-    font-size: 1.5rem;
+    background-color: #f4f4f5;
     color: #0E0E10;
+}
+.index-buttons a:first-child:hover {
+    background-color: #d4d4d8;
+    transition: .5s ease-in-out;
 }
 .index-buttons a:last-child {
     /* Mint button */
-    background-color: #0E0E10;
-    border: 1px solid white;
-    border-radius: 6px;
-    font-size: 1.5rem;
+    background-color: #27272A;
     color: white;
 }
-
-#index-about-button:hover {
-    opacity: 90%;
+.index-buttons a:last-child:hover {
+    background-color: #3f3f46;
+    transition: .5s ease-in-out;
 }
-
-#index-mint-button:hover {}
 /* End index */
 /* ---------------------------------------------- */
 
@@ -264,10 +264,6 @@ h5.mint-button {
 
     .indexdiv p {
         text-align: center;
-    }
-
-    .index-button {
-        width: 10rem;
     }
 
     .index-buttons {
