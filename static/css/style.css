@@ -1,0 +1,312 @@
+/* Color Changing */
+:root {
+    --background-image: url('/images/home-background.svg');
+    /* Tailwind Colors [zinc] */
+    --color-10: #f4f4f5;
+    --color-20: #e4e4e7;
+    --color-30: #d4d4d8;
+    --color-40: #a1a1aa;
+    --color-50: #71717a;
+    --color-60: #52525b;
+    --color-70: #3f3f46;
+    --color-80: #27272a;
+    --color-90: #18181b;
+    --color-0: #0E0E10;
+    --color-pure-primary: black;
+    --color-pure-accent: white;
+}
+[data-theme='light'] {
+    --background-image: url('/images/home-background-light.svg');
+    --color-90: #f4f4f5;
+    --color-80: #e4e4e7;
+    --color-70: #d4d4d8;
+    --color-60: #a1a1aa;
+    --color-50: #71717a;
+    --color-40: #52525b;
+    --color-30: #3f3f46;
+    --color-20: #27272a;
+    --color-10: #18181b;
+    --color-0: #FAFAFA;
+    --color-pure-primary: white;
+    --color-pure-accent: black;
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: var(--background-image);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+.col {
+    color: var(--color-30);
+}
+/* ----------------------------------------------- */
+/* Start index */
+.indexdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 600px;
+    height: 70vh;
+}
+.indexdiv p{
+    font-weight: normal;
+    max-width: 43.75rem;
+}
+.indexdiv img {
+    width: 25rem;
+    height: auto;
+}
+#index-title {
+    color: var(--color-pure-accent);
+    font-size: 2.25rem;
+}
+#index-header {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+#index-body {
+    font-size: 1rem;
+}
+.index-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-top: 5rem;
+}
+.index-buttons a {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: .5s ease-in-out;
+}
+.index-buttons a:first-child {
+    /* About button */
+    background-color: var(--color-10);
+    color: var(--color-0);
+}
+.index-buttons a:first-child:hover {
+    background-color: var(--color-30);
+    transition: .5s ease-in-out;
+}
+.index-buttons a:last-child {
+    /* Mint button */
+    background-color: var(--color-80);
+    color: var(--color-pure-accent);
+}
+.index-buttons a:last-child:hover {
+    background-color: var(--color-70);
+    transition: .5s ease-in-out;
+}
+/* End index */
+/* ---------------------------------------------- */
+
+.px-6 {
+    padding-left: 10%;
+    padding-right: 10%
+}
+
+/* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.nav-link {
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.nav-active {
+    background: var(--color-80);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-mint {
+    max-width: 10rem;
+    background: var(--color-30);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#nav-mint-label {
+    color: var(--color-pure-primary);
+
+}
+
+
+.nav-label {
+    margin: 0;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.footer-link {
+    padding: 16px;
+}
+
+.mt-6 {
+    margin-top: 10%;
+}
+
+/* set the hamburger button to white instead of gray */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+
+input#mint-amount {
+    background-color: var(--color-30);
+    color: var(--color-pure-primary);
+    height: 100%;
+    min-height: 50px;
+}
+
+
+input#mint-amount:focus-visible {
+    outline: none;
+}
+
+.reveal {
+    width: 25%;
+    animation-duration: 1s;
+    animation-name: reveal-amount;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes reveal-amount {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 25%;
+    }
+}
+
+#mint-button:active {
+    border-width: 2px;
+}
+
+#mint-button {
+    background-color: #03A64A;
+    border-color: #03A64A;
+    color: var(--color-30);
+    flex-grow: 1;
+    height: 100%;
+    border-width: 0;
+    min-height: 50px;
+}
+
+#mint-button.disable {
+    background-color: gray;
+    cursor: default;
+    border-color: gray;
+}
+
+
+.minting-container {
+    max-width: 700px;
+    height: 100px;
+}
+
+@include media-breakpoint-up(sm) {
+    .minting-container {
+        width: 50vw;
+    }
+}
+
+h5.mint-button {
+    border-width: none;
+}
+
+.error-banner {
+    background-color: #f22900;
+    /* background-color: #e1453a; */
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contract-address {
+    color: var(--color-30);
+    text-decoration: none;
+}
+
+.link-icon {
+    width: 22px;
+}
+
+.white {
+    color: var(--color-30);
+}
+
+/* ------------ */
+
+
+.home-button {
+    width: 200px;
+}
+
+.parallex {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .indexdiv {
+        flex-direction: column-reverse;
+        height: inherit;
+        margin-top: 5rem;
+    }
+
+    .indexdiv p {
+        text-align: center;
+    }
+
+    .index-buttons {
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+
+    #index-title {
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .indexdiv img {
+        padding: 12px;
+    }
+}

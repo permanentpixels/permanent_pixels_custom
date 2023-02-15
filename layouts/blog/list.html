@@ -1,0 +1,20 @@
+{{ define "content" }}
+<div class="container">
+    <h1 class="text-center fw-medium my-5">Blog</h1>
+    {{ template "_internal/pagination.html" . }}
+
+    {{ range (.Paginate ( first 2 .Pages.ByDate.Reverse)).Pages }}
+    <a href="{{.Permalink}}" style="text-decoration: none;">
+        <div class="container p-3 mb-3" style="background-color: #18181b;">
+            <!-- date -->
+            <h6 class="fw-light" style="color: #d4d4d8;">{{.Date.Format "January 2, 2006"}}</h6>
+            <!--title-->
+            <h3 class="fw-medium title">{{.Title}}</h3>
+            <!-- description -->
+            <p class="mb-0" style="color: #d4d4d8;">{{.Description}}</p>
+        </div>
+    </a>
+    {{ end }}
+
+</div>
+{{ end }}

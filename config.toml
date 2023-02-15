@@ -1,0 +1,28 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+[menu]
+[[menu.main]]
+  name = 'About'
+  url = '/blog/about-permanent-pixels/'
+  weight = 2
+
+[[menu.main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 3
+
+[[menu.main]]
+  name = 'Mint'
+  url = '/mint/'
+  weight = 6
+
+[[menu.main]]
+  name = 'Resources'
+  url = '/resources'
+  weight = 6
