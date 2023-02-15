@@ -1,9 +1,41 @@
+/* Color Changing */
+:root {
+    --background-image: url('/images/home-background.svg');
+    /* Tailwind Colors [zinc] */
+    --color-10: #f4f4f5;
+    --color-20: #e4e4e7;
+    --color-30: #d4d4d8;
+    --color-40: #a1a1aa;
+    --color-50: #71717a;
+    --color-60: #52525b;
+    --color-70: #3f3f46;
+    --color-80: #27272a;
+    --color-90: #18181b;
+    --color-0: #0E0E10;
+    --color-pure-primary: black;
+    --color-pure-accent: white;
+}
+[data-theme='light'] {
+    --background-image: url('/images/home-background-light.svg');
+    --color-90: #f4f4f5;
+    --color-80: #e4e4e7;
+    --color-70: #d4d4d8;
+    --color-60: #a1a1aa;
+    --color-50: #71717a;
+    --color-40: #52525b;
+    --color-30: #3f3f46;
+    --color-20: #27272a;
+    --color-10: #18181b;
+    --color-0: #FAFAFA;
+    --color-pure-primary: white;
+    --color-pure-accent: black;
+}
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-image: url('/images/home-background.svg');
+    background-image: var(--background-image);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +51,7 @@ h6,
 li,
 p,
 .col {
-    color: #d4d4d8;
+    color: var(--color-30);
 }
 /* ----------------------------------------------- */
 /* Start index */
@@ -39,7 +71,7 @@ p,
     height: auto;
 }
 #index-title {
-    color: white;
+    color: var(--color-pure-accent);
     font-size: 2.25rem;
 }
 #index-header {
@@ -69,20 +101,20 @@ p,
 }
 .index-buttons a:first-child {
     /* About button */
-    background-color: #f4f4f5;
-    color: #0E0E10;
+    background-color: var(--color-10);
+    color: var(--color-0);
 }
 .index-buttons a:first-child:hover {
-    background-color: #d4d4d8;
+    background-color: var(--color-30);
     transition: .5s ease-in-out;
 }
 .index-buttons a:last-child {
     /* Mint button */
-    background-color: #27272A;
-    color: white;
+    background-color: var(--color-80);
+    color: var(--color-pure-accent);
 }
 .index-buttons a:last-child:hover {
-    background-color: #3f3f46;
+    background-color: var(--color-70);
     transition: .5s ease-in-out;
 }
 /* End index */
@@ -110,19 +142,19 @@ p,
 }
 
 .nav-active {
-    background: #27272A;
+    background: var(--color-80);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .nav-mint {
     max-width: 10rem;
-    background: #D4D4D8;
+    background: var(--color-30);
     border-radius: 4px;
     text-decoration: none;
 }
 
 #nav-mint-label {
-    color: #000000;
+    color: var(--color-pure-primary);
 
 }
 
@@ -149,8 +181,8 @@ p,
 }
 
 input#mint-amount {
-    background-color: #d4d4d8;
-    color: black;
+    background-color: var(--color-30);
+    color: var(--color-pure-primary);
     height: 100%;
     min-height: 50px;
 }
@@ -187,7 +219,7 @@ input#mint-amount:focus-visible {
 #mint-button {
     background-color: #03A64A;
     border-color: #03A64A;
-    color: #d4d4d8;
+    color: var(--color-30);
     flex-grow: 1;
     height: 100%;
     border-width: 0;
@@ -227,7 +259,7 @@ h5.mint-button {
 }
 
 #contract-address {
-    color: #d4d4d8;
+    color: var(--color-30);
     text-decoration: none;
 }
 
@@ -236,7 +268,7 @@ h5.mint-button {
 }
 
 .white {
-    color: #d4d4d8;
+    color: var(--color-30);
 }
 
 /* ------------ */
