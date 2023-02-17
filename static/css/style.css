@@ -37,7 +37,7 @@
 }
 
 body {
-    background-color: #18181b;
+    background-color: var(--color-90);
 }
 
 h1,
@@ -143,7 +143,6 @@ p,
     text-decoration: none;
 }
 .blog-item {
-    background-color: #101010;
     background-color: var(--color-0);
     padding: 1.75rem;
     margin-bottom: 1.5rem;
