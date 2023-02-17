@@ -1,7 +1,7 @@
 ---
 title: About Permanent Pixels
 date: 2023-01-04
-description: An in-depth description of the Permanent Pixels Project
+description: An overview of the Permanent Pixels Project
 authors: Nico and Ben
 ---
 ## Overview

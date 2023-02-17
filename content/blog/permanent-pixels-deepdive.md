@@ -1,7 +1,7 @@
 ---
 title: Permanent Pixels Deepdive
 date: 2023-01-03
-description: An overview of the Permanent Pixels Project
+description: An in-depth description of the Permanent Pixels Project
 author: Ben and Nico
 ---
 
