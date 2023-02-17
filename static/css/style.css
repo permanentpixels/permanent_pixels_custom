@@ -131,16 +131,47 @@ p,
 /* End index */
 /* ---------------------------------------------- */
 
-
-/* Blog */
+/* ----------------------------------------------- */
+/* Start Blog */
+.blogdiv h1 {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.blogdiv a {
+    text-decoration: none;
+}
 .blog-item {
     background-color: #101010;
+    background-color: var(--color-0);
     padding: 1.75rem;
     margin-bottom: 1.5rem;
     border-radius: 20px;
+    transition: .5s ease-in-out;
+}
+.blog-item:hover {
+    background-color: var(--color-80);
+    transition: .5s ease-in-out;
+}
+/* Article Date */
+.blog-item h6 {
+    font-weight: 300;
+    font-style: italic;
+    font-size: .8rem;
+    color: var(--color-40);
+}
+/* Article Title */
+
+/* Article Description */
+.blog-item p {
+    margin-bottom: 0px;
+    color: var(--color-40);
+    font-weight: 300;
 }
 
 /* End Blog */
+/* ------------------------------------ */
 
 /* Begin Blog about */
 
