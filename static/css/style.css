@@ -203,6 +203,70 @@ p,
 
 
 /* End Blog about */
+/* ------------------------------- */
+
+/* ---------------------------------- */
+/* Start Resources */
+.official-links {
+    background-color: var(--color-0);
+    padding: 2rem;
+    border-radius: 20px;
+}
+.official-links-info {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+.official-links-info p {
+    font-size: .75rem;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0px;
+}
+.official-links-info img {
+    height: .75rem;
+}
+.official-links-header {
+    display: flex;
+    column-gap: .75rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.official-links-header img {
+    height: 2rem;
+}
+.official-links-header h2 {
+    margin: 0px;
+}
+.official-links-links {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 24px;
+}
+.official-links-links p {
+    font-size: .75rem;
+    font-weight: 300;
+}
+.official-links-links h1 {
+    font-size: .875rem;
+    font-weight: 400;
+    padding: 10px;
+    background-color: var(--color-90);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--color-30);
+    border: 1px solid var(--color-70);
+    word-break: break-all;
+}
+.official-links-links h1:hover {
+    cursor: pointer;
+}
+
+
+/* End Resources */
+/* -------------------------------------- */
 
 /* Begin 404 */
 .header-404,
