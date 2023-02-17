@@ -5,7 +5,7 @@
 
     {{ range (.Paginate ( first 2 .Pages.ByDate.Reverse)).Pages }}
     <a href="{{.Permalink}}" style="text-decoration: none;">
-        <div class="container p-3 mb-3" style="background-color: #18181b;">
+        <div class="container blog-item">
             <!-- date -->
             <h6 class="fw-light" style="color: #d4d4d8;">{{.Date.Format "January 2, 2006"}}</h6>
             <!--title-->

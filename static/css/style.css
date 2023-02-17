@@ -15,6 +15,7 @@
     --color-pure-primary: black;
     --color-pure-accent: white;
 }
+
 [data-theme='light'] {
     --background-image: url('/images/home-background-light.svg');
     --color-90: #f4f4f5;
@@ -30,16 +31,13 @@
     --color-pure-primary: white;
     --color-pure-accent: black;
 }
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-image: var(--background-image);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #18181b;
 }
 
 h1,
@@ -53,6 +51,7 @@ p,
 .col {
     color: var(--color-30);
 }
+
 /* ----------------------------------------------- */
 /* Start index */
 .indexdiv {
@@ -62,31 +61,38 @@ p,
     min-height: 600px;
     height: 70vh;
 }
-.indexdiv p{
+
+.indexdiv p {
     font-weight: normal;
     max-width: 43.75rem;
 }
+
 .indexdiv img {
     width: 25rem;
     height: auto;
 }
+
 #index-title {
     color: var(--color-pure-accent);
     font-size: 2.25rem;
 }
+
 #index-header {
     font-style: italic;
     font-size: 1.5rem;
 }
+
 #index-body {
     font-size: 1rem;
 }
+
 .index-buttons {
     display: flex;
     align-items: center;
     column-gap: 2rem;
     margin-top: 5rem;
 }
+
 .index-buttons a {
     align-items: center;
     justify-content: center;
@@ -99,26 +105,74 @@ p,
     border-radius: 6px;
     transition: .5s ease-in-out;
 }
+
 .index-buttons a:first-child {
     /* About button */
     background-color: var(--color-10);
     color: var(--color-0);
 }
+
 .index-buttons a:first-child:hover {
     background-color: var(--color-30);
     transition: .5s ease-in-out;
 }
+
 .index-buttons a:last-child {
     /* Mint button */
     background-color: var(--color-80);
     color: var(--color-pure-accent);
 }
+
 .index-buttons a:last-child:hover {
     background-color: var(--color-70);
     transition: .5s ease-in-out;
 }
+
 /* End index */
 /* ---------------------------------------------- */
+
+
+/* Blog */
+.blog-item {
+    background-color: #101010;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+}
+
+/* End Blog */
+
+/* Begin Blog about */
+
+.blog-content h2 {
+    margin-top: 3rem;
+}
+
+.blog-content h3 {
+    margin-top: 2rem;
+}
+
+.blog-content p img {
+    max-height: 350px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.about-triple {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* End Blog about */
 
 .px-6 {
     padding-left: 10%;
