@@ -281,11 +281,21 @@ p,
     padding: 2rem;
     border-radius: 20px;
 }
-.nft-metadata-header{
+.nft-metadata-info {
+    display: flex;
+    margin-top: 1.5rem;
+    column-gap: 6px;
+    align-items: top;
+}
+.nft-metadata-info p {
     font-size: .75rem;
     font-weight: 300;
     font-style: italic;
-    margin-top: 1.5rem;
+    margin: 0px;
+}
+.nft-metadata-info img {
+    height: .75rem;
+    margin-top: 3px;
 }
 .nft-metadata-table {
     margin-top: 2rem;
