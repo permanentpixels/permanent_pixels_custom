@@ -216,7 +216,7 @@ p,
 .general-info-header {
     display: flex;
     align-items: center;
-    column-gap: 6px;
+    column-gap: .75rem;
 }
 .general-info-header h2 {
     margin: 0px;
@@ -225,10 +225,6 @@ p,
     height: 2rem;
     width: 2rem;
     border-radius: 4px;
-}
-#black {
-    background-color: var(--color-pure-primary);
-
 }
 #white {
     background-color: var(--color-pure-accent);
