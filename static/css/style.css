@@ -207,11 +207,69 @@ p,
 
 /* ---------------------------------- */
 /* Start Resources */
+/* Start General Info */
+.general-info {
+    background-color: var(--color-0);
+    padding: 2rem;
+    border-radius: 20px;
+}
+.general-info-header {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+.general-info-header h2 {
+    margin: 0px;
+}
+.square {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 4px;
+}
+#black {
+    background-color: var(--color-pure-primary);
+
+}
+#white {
+    background-color: var(--color-pure-accent);
+}
+.general-info-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+.info {
+    min-width: 220px;
+    min-height: 80px;
+    border-radius: 10px;
+    background-color: var(--color-90);
+    flex: 1;
+}
+.general-info-info h1 {
+    padding: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+}
+.general-info-info p  {
+    padding: 1rem;
+    padding-top: .4rem;
+    font-size: .875rem;
+    font-weight: 300;
+    margin: 0px;
+    color: var(--color-40);
+}
+/* End General Info */
 /* Start Official Links */
 .official-links {
     background-color: var(--color-0);
     padding: 2rem;
     border-radius: 20px;
+    margin-top: 2rem;
 }
 .official-links-info {
     display: flex;
