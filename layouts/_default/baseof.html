@@ -31,28 +31,52 @@
 <body class="d-flex flex-column h-100 index-body">
     <header>
         {{ block "header" . }}
-        <nav class="navbar navbar-expand-lg px-6">
-            <div class="container-fluid"><a href="/" class="navbar-brand"><img src="/images/favicon.png"
-                        alt="Permanent Pixels Logo" width="50" height="50"></a><button
-                    class="navbar-toggler custom-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button></div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-lg-0 text-center">
-                    {{ $currentPage := .}}
-                    {{ $menu := "main"}}
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid"><a href="/" class="navbar-brand"><img src="/images/favicon.png" alt="Permanent Pixels Logo" width="30" height="30"></a>
+                <button class="navbar-toggler custom-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-lg-0 text-center">
+                        {{ $currentPage := .}}
+                        {{ $menu := "main"}}
 
-                    {{ range (.Site.Menus.main.ByWeight) }}
-                    {{ $isMenuCurrent := ($currentPage.IsMenuCurrent $menu .)}}
+                        {{ range (.Site.Menus.main.ByWeight) }}
+                        {{ $isMenuCurrent := ($currentPage.IsMenuCurrent $menu .)}}
 
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="{{ .URL }}">
-                            <h6 class="text-white">{{ .Name }}</h6>
-                        </a>
-                    </li>
-                    {{ end }}
-                </ul>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="{{ .URL }}">
+                                <h6>{{ .Name }}</h6>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    <div class="socials mt-auto navbar-dark">
+                        <ul class="container d-flex justify-content-center align-items-center mb-0">
+                            <li class="nav-item">
+                                <a class="footer-link active" href="https://twitter.com/pxlsnft" target="_blank"><img
+                                        src="/images/twitter.svg" alt="Twitter Logo" width="auto" height="16"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="footer-link active" href="https://discord.gg/6t7Ws9ZRTz" target="_blank"><img
+                                        src="/images/discord.svg" alt="Discord Logo" width="auto" height="16"></a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="footer-link active" href="https://opensea.io/collection/pxlsnft" target="_blank"><img
+                                        src="/images/opensea.svg" alt="Opensea Logo" width="auto" height="16"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="footer-link active" href="https://pxlsnft.medium.com/" target="_blank"><img
+                                        src="/images/medium.svg" alt="Medium Logo" width="auto" height="16"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="footer-link active"
+                                    href="https://polygonscan.com/address/0x0d85c9727ef46817a8f01193c5778deccf44df81"
+                                    target="_blank"><img src="/images/polygon-icon.svg" alt="Medium Logo" width="auto" height="16"></a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
         {{ end }}
@@ -63,7 +87,7 @@
         {{ end }}
     </main>
     {{ block "footer" . }}
-    <footer class="footer mt-auto pt-5 pb-3 navbar-dark">
+    <!-- <footer class="footer mt-auto pt-5 pb-3 navbar-dark">
         <ul class="container d-flex justify-content-center align-items-center">
             <li class="nav-item mt-2">
                 <a class="footer-link active" href="https://twitter.com/pxlsnft" target="_blank"><img
@@ -87,7 +111,7 @@
                     target="_blank"><img src="/images/polygon-icon.svg" alt="Medium Logo" width="30" height="auto"></a>
             </li>
         </ul>
-    </footer>
+    </footer> -->
     {{ end }}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

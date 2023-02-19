@@ -51,6 +51,66 @@ p,
 .col {
     color: var(--color-30);
 }
+/* -------------------------------------------- */
+/* Start Nav */
+.navbar {
+    /* background-color: var(--color-0); */
+    max-width: 1920px;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.nav-link {
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
+    /* background-color: var(--color-90); */
+}
+.nav-link h6 {
+    font-size: .875rem;
+    font-weight: 400;
+    color: var(--color-pure-accent);
+    margin: 0px;
+}
+
+.nav-active {
+    background: var(--color-80);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-mint {
+    max-width: 10rem;
+    background: var(--color-30);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#nav-mint-label {
+    color: var(--color-pure-primary);
+
+}
+.nav-label {
+    margin: 0;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+/* set the hamburger button to white instead of gray */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+/* End Nav */
+/* ------------------------------------------------ */
+
 
 /* ----------------------------------------------- */
 /* Start index */
@@ -59,7 +119,7 @@ p,
     align-items: center;
     justify-content: space-between;
     min-height: 600px;
-    height: 70vh;
+    height: 90vh;
 }
 
 .indexdiv p {
@@ -177,11 +237,9 @@ p,
 .blog-content h2 {
     margin-top: 3rem;
 }
-
 .blog-content h3 {
     margin-top: 2rem;
 }
-
 .blog-content p img {
     max-height: 350px;
     width: auto;
@@ -191,8 +249,6 @@ p,
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
-
 .about-triple {
     display: block;
     margin-left: auto;
@@ -483,64 +539,9 @@ p,
 
 /* End 404 */
 
-.px-6 {
-    padding-left: 10%;
-    padding-right: 10%
-}
-
-/* this creates a slight accessibilty problem but I cant figure out how to disable the click focus without this */
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.nav-container {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.nav-link {
-    border-radius: 4px;
-    padding: 10px;
-}
-
-.nav-active {
-    background: var(--color-80);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.nav-mint {
-    max-width: 10rem;
-    background: var(--color-30);
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-#nav-mint-label {
-    color: var(--color-pure-primary);
-
-}
-
-
-.nav-label {
-    margin: 0;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-}
 
 .footer-link {
     padding: 16px;
-}
-
-.mt-6 {
-    margin-top: 10%;
-}
-
-/* set the hamburger button to white instead of gray */
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 }
 
 input#mint-amount {
@@ -649,6 +650,12 @@ h5.mint-button {
 }
 
 @media only screen and (max-width: 1000px) {
+    .socials {
+        padding-top: 1.5rem;
+    }
+    .nav-link {
+        padding-bottom: 1rem;
+    }
     .indexdiv {
         flex-direction: column-reverse;
         height: inherit;
