@@ -451,6 +451,19 @@ p,
     margin-bottom: 4px;
 }
 /* End Project Team */
+/* Start Questions Comments */
+.questions-comments {
+    background-color: var(--color-0);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+.questions-comments p {
+    margin: 0px;
+    padding-top: 1rem;
+    font-weight: 300;
+}
+/* End Questions Comments */
 /* End Resources */
 /* -------------------------------------- */
 
