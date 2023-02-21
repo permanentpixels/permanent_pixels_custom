@@ -583,6 +583,29 @@ p,
     font-weight: 600;
     text-align: center;
 }
+.mint-info-anchor {
+    background-color: #0E0E10;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.mint-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+}
+.mint-info h1 {
+    font-size: .875rem;
+    text-align: center;
+}
+.mint-info p {
+    font-size: .75rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px;
+}
 /* End Mint */
 /* ----------------------------------------- */
 
