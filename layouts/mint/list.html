@@ -1,23 +1,20 @@
 {{ define "content"}}
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center px-0">
-    <div id="error-banner" class="hidden primary container-fluid">
-        <h3 id="error-message"></h3>
-    </div>
-    <!-- could add 'border-bottom border-1 border-white' to the div below -->
-    <div class="container-fluid mb-5">
-        <h1 class="fw-medium container-fluid d-flex justify-content-center my-5">Mint</h1>
-        <h5>Cost per mint: .33 Matic</h5>
-        <h5 class="mb-5">Currently minted: <span id="minted-amount">--</span> / 10,000,000</h5>
-    </div>
-
-    <div class="container-fluid mb-3">
-        <h5>Mint up to <span style="color: #03A64A;">1000</span> Permanent Pixels at a time</h5>
-    </div>
-
-    <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center mb-5 minting-container ">
-        <input id="mint-amount" class="border-0 text-center mint-amount m-0 hidden"></input>
-        <button id="mint-button" type="button" class="m-0">Click to connect</button>
-        <!-- <p class="d-none justify-content-end align-items-center m-0" style="width: 70vw;color: gray;">Up to 1000 at a time</p> -->
+<div class="mintdiv container">
+    <div class="mint">
+        <h1>Mint</h1>
+        <div class="mint-container">
+            <div class="mint-amount">
+                <h1>0</h1>
+                <h1 id="max-mint">/ 1000</h1>
+            </div>
+            <div class="mint-cost">
+                <p>0 Matic</p>
+            </div>
+        </div>
+        <div class="mint-button">
+            <h1>Coming Soon</h1>
+        </div>
     </div>
 </div>
+<div class="container mt-auto">look ehre</div>
 {{ end }}
