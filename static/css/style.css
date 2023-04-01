@@ -418,7 +418,7 @@ p,
     background-color: var(--color-80);
     margin: 0px;
     padding: 1rem;
-    border: 1px solid var(--color-70);
+    /* border: 1px solid var(--color-70); */
     border-top: 0px;
     font-size: 14px;
 }
@@ -428,7 +428,7 @@ p,
     background-color: var(--color-90);
     margin: 0px;
     padding: 1rem;
-    border: 1px solid var(--color-70);
+    /* border: 1px solid var(--color-70); */
     border-left: 0px;
     border-top: 0px;
     font-size: 14px;
@@ -436,11 +436,11 @@ p,
 }
 .nft-metadata-table-item:first-child .header {
     border-radius: 10px 0px 0px 0px;
-    border-top: 1px solid var(--color-70);
+    /* border-top: 1px solid var(--color-70); */
 }
 .nft-metadata-table-item:first-child .description {
     border-radius: 0px 10px 0px 0px;
-    border-top: 1px solid var(--color-70);
+    /* border-top: 1px solid var(--color-70); */
 }
 .nft-metadata-table-item:last-child .header {
     border-radius: 0px 0px 0px 10px;
