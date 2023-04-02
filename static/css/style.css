@@ -573,7 +573,7 @@ p,
     display: flex;
     flex-direction:column;
     width: 100%;
-    background-color: var(--color-80);
+    background-color: var(--color-0);
     padding: 24px;
     padding-top: 18px;
     padding-bottom: 12px;
