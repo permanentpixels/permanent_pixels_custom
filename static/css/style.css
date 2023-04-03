@@ -112,7 +112,7 @@ span.navbar-toggler-icon {
 .navbar-nav li a:hover {
     color: var(--color-pure-accent);
 }
-.collapse ul:first-child li a {
+#navbarSupportedContent ul li a {
     padding-left: .5rem;
     padding-right: .5rem;
     padding-top: .4rem;
@@ -127,7 +127,8 @@ span.navbar-toggler-icon {
     align-items: center;
 }
 .dropdown-menu {
-    background-color: var(--color-0);
+    background-color: var(--color-90);
+    border: none;
 }
 .dropdown-menu li {
     margin-right: .5rem;
@@ -152,8 +153,11 @@ span.navbar-toggler-icon {
     background-color: #22C55E;
     margin-right: var(--bs-gutter-x,.75rem);
 }
-#mint-nav-link a:hover {
+#mint-nav-link:hover, #mint-nav-link a:hover {
     background-color: #26DC69;
+}
+#navbarSupportedContent #mint-nav-link a {
+    padding-top: .5rem;
 }
 #mint-nav-link a{
     color: var(--color-pure-primary);
@@ -749,8 +753,8 @@ span.navbar-toggler-icon {
        text-align: right;
     }
     #mint-nav-link {
-        margin: 8px;
         padding: .2rem;
+        margin-top: .5rem;
     }
     .button-nav li a {
         justify-content: center;
