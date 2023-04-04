@@ -112,9 +112,9 @@ span.navbar-toggler-icon {
 .navbar-nav li a:hover {
     color: var(--color-pure-accent);
 }
-.navbar .show {
+/* .navbar .show {
     height: 100vh;
-}
+} */
 #navbarSupportedContent ul li a {
     padding-left: .5rem;
     padding-right: .5rem;
@@ -182,6 +182,8 @@ span.navbar-toggler-icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     min-height: 600px;
 }
 .index-two {
@@ -259,7 +261,7 @@ span.navbar-toggler-icon {
 }
 .bottom-fold {
     background-color: var(--color-90);
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
 }
 .bottom-fold .container {
     display: flex;
@@ -803,6 +805,7 @@ span.navbar-toggler-icon {
     #mint-nav-link {
         padding: .2rem;
         margin-top: .5rem;
+        margin-bottom: 100vh;
     }
     .button-nav li a {
         justify-content: center;
