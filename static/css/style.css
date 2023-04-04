@@ -112,6 +112,9 @@ span.navbar-toggler-icon {
 .navbar-nav li a:hover {
     color: var(--color-pure-accent);
 }
+.navbar .show {
+    height: 100vh;
+}
 #navbarSupportedContent ul li a {
     padding-left: .5rem;
     padding-right: .5rem;
