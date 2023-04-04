@@ -799,7 +799,6 @@ span.navbar-toggler-icon {
     }
     .navbar-nav a {
        display: block;
-       text-align: right;
     }
     #mint-nav-link {
         padding: .2rem;
