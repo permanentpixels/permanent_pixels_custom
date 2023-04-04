@@ -169,7 +169,6 @@ span.navbar-toggler-icon {
 .navbar-toggler:focus {
     box-shadow: none;
 }
-
 /* End Nav */
 /* ------------------------------------------------ */
 
@@ -181,7 +180,11 @@ span.navbar-toggler-icon {
     align-items: center;
     justify-content: space-between;
     min-height: 600px;
-    height: 90vh;
+}
+.index-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .indexdiv p {
@@ -190,18 +193,20 @@ span.navbar-toggler-icon {
 }
 
 .indexdiv img {
-    width: 25rem;
+    width: 20rem;
     height: auto;
 }
 
 #index-title {
-    color: var(--color-pure-accent);
-    font-size: 2.25rem;
+    color: var(--color-30);
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 #index-header {
-    font-style: italic;
-    font-size: 1.5rem;
+    /* font-style: italic; */
+    font-size: 2.25rem;
+    font-weight: 600;
 }
 
 #index-body {
@@ -212,7 +217,7 @@ span.navbar-toggler-icon {
     display: flex;
     align-items: center;
     column-gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .index-buttons a {
@@ -223,7 +228,7 @@ span.navbar-toggler-icon {
     height: 3rem;
     width: 9rem;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 6px;
     transition: .5s ease-in-out;
 }
@@ -249,7 +254,44 @@ span.navbar-toggler-icon {
     background-color: var(--color-70);
     transition: .5s ease-in-out;
 }
+.bottom-fold {
+    background-color: var(--color-90);
+    padding-bottom: 3rem;
+}
+.bottom-fold .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.container-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+.bottom-fold p {
+    font-weight: 300;
+}
+.bottom-fold h5 {
+    font-weight: 500;
+}
+.bottom-fold-item {
+    flex: 1 1 0px;
+    min-width: 250px;
+    border: 1px solid var(--color-80);
+    padding: 1rem;
+    border-radius: 6px;
+}
+.bottom-fold-item-header {
+    display: flex;
+    column-gap: 12px;
+    padding-bottom: 1rem;
 
+}
 /* End index */
 /* ---------------------------------------------- */
 
@@ -716,6 +758,9 @@ span.navbar-toggler-icon {
 }
 
 @media only screen and (max-width: 1000px) {
+    .fold .container {
+        max-width: none;
+    }
     .socials {
         padding-top: 1.5rem;
     }
@@ -724,7 +769,6 @@ span.navbar-toggler-icon {
         height: inherit;
         margin-top: 5rem;
     }
-
     .indexdiv p {
         text-align: center;
     }
@@ -735,10 +779,8 @@ span.navbar-toggler-icon {
     }
 
     #index-title {
-        text-align: center;
         margin-top: 24px;
     }
-
     .indexdiv img {
         padding: 12px;
     }
