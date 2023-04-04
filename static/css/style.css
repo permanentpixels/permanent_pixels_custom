@@ -372,12 +372,12 @@ span.navbar-toggler-icon {
 
 /* ---------------------------------- */
 /* Start Resources */
-/* Start General Info */
-.general-info {
-    background-color: var(--color-0);
-    padding: 2rem;
-    border-radius: 20px;
+.resources-hr {
+    color: var(--color-70);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
+/* Start General Info */
 .general-info-header {
     display: flex;
     align-items: center;
@@ -405,20 +405,20 @@ span.navbar-toggler-icon {
 .info {
     min-width: 220px;
     min-height: 80px;
-    border-radius: 10px;
-    background-color: var(--color-90);
+    border-radius: 6px;
     flex: 1;
+    background-color: var(--color-80);
 }
 .general-info-info h1 {
     padding: 1rem;
-    padding-bottom: .5rem;
     font-size: 1rem;
     font-weight: 500;
     margin: 0px;
+    padding-top: .4rem;
 }
 .general-info-info p  {
     padding: 1rem;
-    padding-top: .4rem;
+    padding-bottom: .5rem;
     font-size: .875rem;
     font-weight: 300;
     margin: 0px;
@@ -426,26 +426,6 @@ span.navbar-toggler-icon {
 }
 /* End General Info */
 /* Start Official Links */
-.official-links {
-    background-color: var(--color-0);
-    padding: 2rem;
-    border-radius: 20px;
-    margin-top: 2rem;
-}
-.official-links-info {
-    display: flex;
-    align-items: center;
-    column-gap: 6px;
-}
-.official-links-info p {
-    font-size: .75rem;
-    font-weight: 300;
-    font-style: italic;
-    margin: 0px;
-}
-.official-links-info img {
-    height: .75rem;
-}
 .official-links-header {
     display: flex;
     column-gap: .75rem;
@@ -468,17 +448,17 @@ span.navbar-toggler-icon {
 .official-links-links p {
     font-size: .75rem;
     font-weight: 300;
+    display: none;
 }
 .official-links-links h1 {
     user-select: none;
     font-size: .875rem;
     font-weight: 400;
     padding: 10px;
-    background-color: var(--color-90);
+    background-color: var(--color-0);
     border-radius: 6px;
     text-decoration: none;
     color: var(--color-30);
-    border: 1px solid var(--color-70);
     word-break: break-all;
     transition: .3s ease-in-out;
 }
@@ -489,17 +469,11 @@ span.navbar-toggler-icon {
 }
 .official-links-links h1:active {
     cursor: pointer;
-    background-color: var(--color-60);
+    background-color: var(--color-70);
     transition: .3s ease-in-out;
 }
 /* End Official Links */
 /* Start NFT Metadata */
-.nft-metadata {
-    margin-top: 2rem;
-    background-color: var(--color-0);
-    padding: 2rem;
-    border-radius: 20px;
-}
 .nft-metadata-info {
     display: flex;
     margin-top: 1.5rem;
@@ -524,7 +498,7 @@ span.navbar-toggler-icon {
 }
 .nft-metadata-table-item .header {
     width: 180px;
-    background-color: var(--color-80);
+    background-color: var(--color-0);
     margin: 0px;
     padding: 1rem;
     /* border: 1px solid var(--color-70); */
@@ -534,7 +508,7 @@ span.navbar-toggler-icon {
 .nft-metadata-table-item .description {
     flex-grow: 1;
     width: 100%;
-    background-color: var(--color-90);
+    background-color: var(--color-80);
     margin: 0px;
     padding: 1rem;
     /* border: 1px solid var(--color-70); */
@@ -544,27 +518,21 @@ span.navbar-toggler-icon {
     font-weight: 300;
 }
 .nft-metadata-table-item:first-child .header {
-    border-radius: 10px 0px 0px 0px;
+    border-radius: 6px 0px 0px 0px;
     /* border-top: 1px solid var(--color-70); */
 }
 .nft-metadata-table-item:first-child .description {
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 0px 6px 0px 0px;
     /* border-top: 1px solid var(--color-70); */
 }
 .nft-metadata-table-item:last-child .header {
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 0px 6px;
 }
 .nft-metadata-table-item:last-child .description {
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 6px 0px;
 }
 /* End NFT Metadata */
 /* Start Project Team */
-.project-team {
-    margin-top: 2rem;
-    background-color: var(--color-0);
-    padding: 2rem;
-    border-radius: 20px;
-}
 .team-members {
     margin-top: 2rem;
     display: flex;
@@ -577,7 +545,7 @@ span.navbar-toggler-icon {
     display: flex;
     flex: 1;
     min-width: 250px;
-    background-color: var(--color-90);
+    background-color: var(--color-0);
     border-radius: 10px 10px 10px 10px;
 }
 .member img {
@@ -591,7 +559,7 @@ span.navbar-toggler-icon {
     justify-content: space-between;
     background-color: var(--color-80);
     padding: 1rem;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 6px 6px 0px;
     width: 100%;
 }
 .highlight {
@@ -620,7 +588,7 @@ span.navbar-toggler-icon {
 .questions-comments {
     background-color: var(--color-0);
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 2rem;
 }
 .questions-comments p {
@@ -640,7 +608,7 @@ span.navbar-toggler-icon {
     flex-direction: column;
     align-items: center;
 }
-.mint hr {
+.container .mint hr {
     background-color: var(--color-40);
     margin-bottom: 2.5rem;
 }
@@ -765,7 +733,11 @@ span.navbar-toggler-icon {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+@media only screen and (max-width: 1200px) {
+    .info {
+        min-width: 300px;
+    }
+}
 @media only screen and (max-width: 1000px) {
     .fold .container {
         max-width: none;
