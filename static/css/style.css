@@ -315,7 +315,7 @@ span.navbar-toggler-icon {
     background-color: var(--color-0);
     padding: 1.75rem;
     margin-bottom: 1.5rem;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: .5s ease-in-out;
 }
 .blog-item:hover {
@@ -330,12 +330,14 @@ span.navbar-toggler-icon {
     color: var(--color-40);
 }
 /* Article Title */
-
+.blog-item h2 {
+    font-weight: 600;
+}
 /* Article Description */
 .blog-item p {
     margin-bottom: 0px;
     color: var(--color-40);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* End Blog */

@@ -6,8 +6,8 @@
     {{ range (.Paginate ( first 2 .Pages.ByDate.Reverse)).Pages }}
     <a href="{{.Permalink}}">
         <div class="container blog-item">
-            <h6>{{.Date.Format "January 2, 2006"}}</h6>
             <h2>{{.Title}}</h2>
+            <h6>{{.Date.Format "January 2, 2006"}}</h6>
             <!-- description -->
             <p>{{.Description}}</p>
         </div>
