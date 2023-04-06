@@ -64,9 +64,7 @@ p,
     z-index: 20;
 }
 .navbar .container-fluid {
-    padding: 0;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 12px;
 }
 span.navbar-toggler-icon svg {
     stroke: var(--color-10);
@@ -770,6 +768,9 @@ span.navbar-toggler-icon {
     .navbar-nav li{
         padding: .2rem;
         margin-right: .5rem;
+    }
+    .navbar .container-fluid {
+        padding: 8px;
     }
     .navbar-nav a {
        display: block;
