@@ -838,6 +838,9 @@ span.navbar-toggler-icon {
     .dropdown-menu li p {
         width: 80px;
     }
+    .infographic-container h2 {
+        padding-bottom: 1rem;
+    }
     .infographic-description {
         display: none;
     }
