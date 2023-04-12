@@ -304,8 +304,11 @@ span.navbar-toggler-icon {
     color: var(--color-40);
 }
 .infographic-container h2 {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     text-align: center;
+}
+.infographic-container h5:first-child {
+    margin-top: 0rem;
 }
 .infographic-container h5 {
     margin-top: 2rem;
