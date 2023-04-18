@@ -336,6 +336,21 @@ span.navbar-toggler-icon {
     font-size: 14px;
     margin-bottom: .4rem;
 }
+.rarity {
+    background-color: var(--color-90);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.rarity h1 {
+    text-align: center;
+}
+.rarity h5 {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+.rarity p {
+    color: var(--color-40);
+}
 /* End index */
 /* ---------------------------------------------- */
 
