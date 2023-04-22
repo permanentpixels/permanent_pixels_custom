@@ -400,10 +400,10 @@ span.navbar-toggler-icon {
 /* Begin Blog about */
 
 .blog-content h2 {
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 .blog-content h3 {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .blog-content p img {
     max-height: 350px;
